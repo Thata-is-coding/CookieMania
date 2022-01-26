@@ -1,0 +1,55 @@
+<ion-header> 
+  <ion-toolbar id="titulo">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button defaultHref="main"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Configurações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="fundo">
+  <ion-row id="formato">
+    <h5 classe="titulo">Música de fundo:</h5>
+    <ion-col id="fundo">
+      <ion-range min="20" max="80" step="2" class="slider" Name="musica"  [(ngModel)]="musica">
+        <ion-icon size="small" slot="start" name="musical-notes"></ion-icon>
+        <ion-icon slot="end" name="musical-notes"></ion-icon>
+      </ion-range>
+    </ion-col> 
+  </ion-row>
+
+  <ion-row id="formato">
+    <h5 >Efeitos sonoros:</h5>
+    <ion-col id="fundo">
+      <ion-range min="20" max="80" step="2" class="slider" Name="efeito"  [(ngModel)]="efeito">
+        <ion-icon size="small" slot="start" name="musical-note"></ion-icon>
+        <ion-icon slot="end" name="musical-note"></ion-icon>
+      </ion-range>
+    </ion-col>
+  </ion-row>
+
+  <ion-row id="formato">
+    <h5 >Luminosidade:</h5>
+    <ion-col id="fundo">
+      <ion-range min="20" max="80" step="2" class="slider" Name="luz"  [(ngModel)]="luz">
+        <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+        <ion-icon slot="end" name="sunny"></ion-icon>
+      </ion-range>
+    </ion-col>
+  </ion-row>
+
+  <ion-row id="formato">
+    <ion-col>
+      <u id= "link" ><h5 id= "link">Avalie o jogo</h5></u>
+    </ion-col>
+    <ion-col>
+      <u id= "link" ><h5 id= "link">Reportar um problema</h5></u>
+    </ion-col>
+  </ion-row>
+      
+  <ion-row id="formato">
+    <ion-button fill="outline" (click)="salvar()"  > Salvar Alterações</ion-button>
+  </ion-row>
+</ion-content>

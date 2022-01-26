@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar class="fundo">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fundo">
+
+  <div id="container">
+    <ion-grid>
+      
+      <ion-row>
+        <ion-img src="./assets/cookie_mania.png" id="logo"></ion-img>
+      </ion-row>
+
+      <ion-row>
+        <ion-img src="./assets/cute_cookie.png" id="logo"></ion-img>
+      </ion-row>
+
+      <ion-row id="title1-box">
+        <ion-col>
+          <ion-title id="title1" position="floating">Fazer Login</ion-title>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input type="text" placeholder="Insira o seu e-mail" required [(ngModel)]="email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>             
+      
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Senha</ion-label>
+            <ion-input type="text" placeholder="Insira a sua senha" id="display" [(ngModel)]="senha"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="success" (click)="fazerLogin(email, senha)"><p>Entrar</p></ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="secondary" routerLink='/sign-user'><p>Cadastrar usuário</p></ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header> 
+  <ion-toolbar id="titulo">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button defaultHref="main"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Achievements</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="fundo">
+  <ion-list  *ngFor="let c of conquistas; let i = index">
+    <ion-item>
+      <ion-icon slot="start" [ios]="c.status + '-outline'" [md]="c.status + '-sharp'"></ion-icon>
+      <ion-label>{{ c.title }}</ion-label>
+      <p>{{c.desc}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

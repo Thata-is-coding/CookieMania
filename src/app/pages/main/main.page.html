@@ -1,0 +1,25 @@
+<ion-header> 
+  <ion-toolbar id="titulo">
+    <ion-title>Cookie Mania</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="fundo">
+  <ion-row>
+    <ion-input disabled="true" [(ngModel)]="pontos" class="ion-text-right" id="pontos"></ion-input>
+  </ion-row>
+
+  <ion-fab vertical="center" horizontal= "center" slot="fixed" >
+    
+    <ion-fab-button id="cookie-botao" class="custom-fab" (click)="clicarCookie()">
+      <ion-img src="./assets/cookie-negresco.png" id="cookie-principal" ></ion-img>
+    </ion-fab-button>    
+  </ion-fab>
+  
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/conquista" color="warning">
+      <ion-icon name="trophy"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

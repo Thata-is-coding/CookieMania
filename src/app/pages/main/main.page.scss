@@ -1,0 +1,34 @@
+#fundo{
+    --background: #facbcffd;
+}
+
+#titulo{
+    --background: #d6927dfd;
+}
+
+#cookie-principal {
+    width: 100%;
+    height: auto;
+}
+
+#cookie-botao {
+    --background: #FF000000;
+    --box-shadow: none;
+    
+}
+
+.custom-fab {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.fab-horizontal-center {
+    margin-left: unset;
+    margin-inline-start: -50px !important;
+}
+
+#pontos{
+    margin-right: 10px;
+    font-size: 30px;
+    color: #2b2122;
+}

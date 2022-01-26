@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar class="fundo">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button defaultHref="login-user"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fundo">
+
+  <form [formGroup]="formGroup" (ngSubmit)= "submitForm()">
+    <div id="container">
+      <ion-grid>
+
+        <ion-row>
+          <ion-img src="./assets/cookie_mania.png" id="logo"></ion-img>
+        </ion-row>
+        
+        <ion-row id="title1-box">
+          <ion-col>
+            <ion-title id="title1" position="floating">Cadastrar conta</ion-title>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Nome de usuário</ion-label>
+              <ion-input type="text" placeholder="Informe o seu nome" required formControlName="nome"></ion-input>
+            </ion-item>
+            <!-- Mensagens de erro -->
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.nome.errors?.required">
+              Informe o nome do usuário.
+            </span>
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.nome.errors?.maxlength">
+              O nome do usuário não pode possuir mais de 60 caracteres.
+            </span>
+          </ion-col>
+        </ion-row>
+  
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">E-mail</ion-label>
+              <ion-input type="text" placeholder="Insira o seu e-mail" required formControlName="email"></ion-input>
+            </ion-item>
+            <!-- Mensagens de erro -->
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
+              Informe o e-mail do usuário.
+            </span>
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.email">
+              Insira um e-mail válido.
+            </span>
+          </ion-col>
+        </ion-row>             
+        
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Senha</ion-label>
+              <ion-input type="text" placeholder="Insira a sua senha" formControlName="senha"></ion-input>
+            </ion-item>
+            <!-- Mensagens de erro -->
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.senha.errors?.required">
+              Informe a senha do usuário.
+            </span>
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.senha.errors?.maxlength">
+              A senha não pode possuir mais de 20 caracteres.
+            </span>
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.senha.errors?.minlength">
+              A senha não pode possuir menos de 8 caracteres.
+            </span>
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.senha.errors?.pattern">
+              A senha deve possuir de 8 a 20 caracteres, e, no mínimo, um caractere especial, uma letra minúscula e uma letra maíuscula.
+            </span>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">País</ion-label>
+              <ion-input type="text" placeholder="Insira o seu país" required formControlName="country"></ion-input>
+            </ion-item>
+            <!-- Mensagens de erro -->
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.country.errors?.required">
+              Informe o seu país.
+            </span>
+          </ion-col>
+        </ion-row>
+  
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" expand="block" color="success"><p>Salvar dados de usuário</p></ion-button>
+          </ion-col>
+        </ion-row>
+  
+      </ion-grid>
+    </div>
+  </form>
+
+</ion-content>
