@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cookie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list  *ngFor="let c of cookies; let i = index">
+    <ion-item>
+      <ion-img [src]={{c.img}} slot="start"></ion-img>
+      <ion-label>{{c.nome}}</ion-label>
+      <p>{{c.desc}}</p>
+      <ion-fab vertical="bottom" horizontal="end" slot="end">
+        <ion-fab-button routerLink="/cadastrar-tipo-grupo09/" >
+          <ion-icon name={{c.status}}></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar class="fundo">
+    <ion-title>Alterar Senha</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fundo">
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">Nova senha</ion-label>
+        <ion-input type="text" placeholder="Insira o sua nova senha" required [(ngModel)]="novaSenha"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" color="secondary" (click)="substituirSenha()"><p>Alterar</p></ion-button>
+    </ion-col>
+  </ion-row>          
+  
+
+</ion-content>

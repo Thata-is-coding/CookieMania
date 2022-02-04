@@ -54,4 +54,15 @@ export class CookieService {
 
     localStorage.setItem('cookieAtivo', JSON.stringify(cookie));
   }
+  criarcookies( ){
+    let conquistas  = [
+      { id: 0, nome: 'Negreskito', desc: 'Um cookie de chocolate com recheio de baunilha, seu primeiro amigo', multiplicador: 1, status: "lock-open", img: "./assets/cookie-negresco.png" },
+      { id: 1, nome: 'gotinha', desc: 'Um cookie de gotas de chocolate, você pode obter com pontuação igual a 1000', multiplicador:2, status: "lock-closed", img: "./assets/gotinha.png"  },
+      { id: 2, nome: 'coração', desc: 'Um belo biscoito de coração adquirido aos 5000 pontos', multiplicador:5, status: "lock-closed",  img: "./assets/cute-cookie.png"  },
+      
+    ];
+
+    localStorage.setItem('tbConquistas', JSON.stringify(conquistas));
+  }
+
 }

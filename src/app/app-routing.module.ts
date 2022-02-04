@@ -36,8 +36,24 @@ const routes: Routes = [
     loadChildren: () => import('./pages/sair/sair.module').then( m => m.SairPageModule)
   },
   {
+    path: 'alterar-senha',
+    loadChildren: () => import('./pages/alterar-senha/alterar-senha.module').then( m => m.AlterarSenhaPageModule)
+  },
+  {
+    path: 'creditos',
+    loadChildren: () => import('./pages/creditos/creditos.module').then( m => m.CreditosPageModule)
+  },
+  {
+    path: 'cookies',
+    loadChildren: () => import('./pages/cookie/cookie.module').then( m => m.CookiePageModule)
+  },
+  {
     path: 'conquista',
     loadChildren: () => import('./pages/conquista/conquista.module').then( m => m.ConquistaPageModule)
+  },
+  {
+    path: 'pages',
+    loadChildren: () => import('./pages/pages.module').then( m => m.PagesPageModule)
   }
 ];
 

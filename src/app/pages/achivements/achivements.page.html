@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>achivements</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+ 
+    <ion-item-sliding *ngFor="let conquista of conquistas">
+        <ion-icon slot="end" name="trophy-sharp" [ngStyle]="{'color': definirCorStatus(conquista.status)}"></ion-icon>
+       <h5>{{conquista.nome}}</h5>
+        <ion-label>{{conquista.descricao}}</ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+  
+</ion-content>

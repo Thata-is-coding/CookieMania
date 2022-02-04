@@ -1,15 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
-
 #title1-box{
-    margin-top: 5%;
-    margin-bottom: 2%; 
-}
-
-#title1{
+    margin-bottom: 2%;
     text-align: center;
     font-weight: bolder;
-    font-size: 30pt;
-    font-family: 'Neonderthaw', cursive;
 }
 
 #logo{
@@ -33,9 +25,4 @@ p{
 
 .fundo{
     --background: #facbcffd;
-}
-
-.error {
-    color:red;
-    font-size: 9pt;
 }

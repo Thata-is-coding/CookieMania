@@ -36,7 +36,7 @@ export class UserService {
   
   buscarPorId (id: number){
     let usuarios= JSON.parse(localStorage.getItem('tbUsuarios'));
-    let usuario= usuarios.find(u => u.id === id);
+    let usuario= usuarios.find(c => c.id == id);
     return usuario;
   }
   

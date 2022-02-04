@@ -9,11 +9,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public appPages = [
     { title: 'Sair', url: 'sair', icon: 'power'},
-    { title: 'Créditos', url: 'blank', icon: 'information-circle'},
+    { title: 'Créditos', url: 'creditos', icon: 'information-circle'},
     { title: 'Salvar', url: 'salvar', icon: 'save'},
     { title: 'Configurações', url: 'configuracoes', icon: 'construct'},
     { title: 'Loja', url: 'blank', icon: 'cart'},
-    { title: 'Meus Cookies', url: 'blank', icon: 'sparkles'},
+    { title: 'Meus Cookies', url: 'cookies', icon: 'sparkles'},
     { title: 'Meu Perfil', url: 'blank', icon: 'person-circle'},
   ];
   constructor( ) {}
